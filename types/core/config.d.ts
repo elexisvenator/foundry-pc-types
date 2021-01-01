@@ -19,6 +19,16 @@ declare const CONFIG: {
 		typeLabels: any;
 	};
 
+	Dice: {
+		types: typeof DiceTerm[];
+		rollModes: { [mode: string]: string };
+		rolls: typeof Roll[];
+		terms: {
+			[term: string]: typeof DiceTerm;
+		};
+		randomUniform: () => number;
+	};
+
 	/**
 	 * Configuration for the default Item entity class
 	 */

@@ -53,7 +53,7 @@ declare class DiceTerm {
 	/**
 	 * Return the total result of the DiceTerm if it has been evaluated
 	 */
-	get total(): number;
+	get total(): number | null;
 
 	/**
 	 * Return an array of rolled values which are still active within this term
@@ -72,7 +72,7 @@ declare class DiceTerm {
 	}?: {
 		minimize: boolean;
 		maximize: boolean;
-	}): object;
+	}): { result: number; active: boolean };
 
 	/**
 	 * Alter the DiceTerm by adding or multiplying the number of dice which are rolled
@@ -81,6 +81,20 @@ declare class DiceTerm {
 	 * @return           The altered term
 	 */
 	alter(multiply: number, add: number): DiceTerm;
+
+	/**
+	 * Evaluate the roll term, populating the results Array.
+	 * @param {boolean} [minimize]    Apply the minimum possible result for each roll.
+	 * @param {boolean} [maximize]    Apply the maximum possible result for each roll.
+	 * @returns {DiceTerm}    The evaluated dice term
+	 */
+	evaluate({
+		minimize,
+		maximize,
+	}?: {
+		minimize: boolean;
+		maximize: boolean;
+	}): DiceTerm;
 
 	/**
 	 * Serialize the DiceTerm to a JSON string which allows it to be saved in the database or embedded in text.
@@ -104,4 +118,9 @@ declare class DiceTerm {
 	 * Define the denomination string used to register this Dice type in CONFIG.Dice.terms
 	 */
 	static DENOMINATION: string;
+
+	/**
+	 * Define the modifiers that can be used for this particular DiceTerm type.
+	 */
+	static MODIFIERS: { [modifier: string]: string };
 }

@@ -18,7 +18,7 @@ declare class Die extends DiceTerm {
 	 *
 	 * @param modifier     The matched modifier query
 	 */
-	reroll(modifier: string): void;
+	reroll(modifier: string): Die | void;
 
 	/**
 	 * Explode the Die, rolling additional results for any values which match the target set.
@@ -28,9 +28,12 @@ declare class Die extends DiceTerm {
 	 * @param modifier     The matched modifier query
 	 * @param recursive   Explode recursively, such that new rolls can also explode?
 	 */
-	explode(modifier: string, { recursive }?: { recursive: boolean }): void;
+	explode(
+		modifier: string,
+		{ recursive }?: { recursive: boolean }
+	): this | void;
 
-	explodeOnce(modifier: string): void;
+	explodeOnce(modifier: string): this | void;
 
 	/**
 	 * Keep a certain number of highest or lowest dice rolls from the result set.
