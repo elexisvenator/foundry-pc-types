@@ -2,6 +2,8 @@
 
 # Foundry Project Creator Types
 
+![Node.js Package](https://github.com/elexisvenator/foundry-pc-types/workflows/Node.js%20Package/badge.svg)
+
 </div>
 
 ## Heads up!
@@ -10,11 +12,23 @@ This is a clone of [foundry-pc-types](https://gitlab.com/foundry-projects/foundr
 
 If you would like to contribute, consider contributing to [NickEastNL's repo](https://gitlab.com/foundry-projects/foundry-pc/foundry-pc-types) first/as well.
 
+Currently this project is being maintained against **Foundry VTT 0.7.9**
+
 ## Installing
 
-~~Due to how the Node Package Manager (NPM) works, it is not possible to simply update a package installed from Git using `npm install`. Simply reinstall the package with the command below to retrieve the latest version.~~
+[Follow these steps](https://docs.github.com/en/free-pro-team@latest/packages/guides/configuring-npm-for-use-with-github-packages#authenticating-to-github-packages) to support downloading from GitHub Packages.
 
-**TODO: This will change shortly.**
+Add the following to your `.npmrc` file:
+
+```npmrc
+@elexisvenator:registry=https://npm.pkg.github.com
+```
+
+Once you have that, install the latest version with 
+
+```bash
+npm i @elexisvenator/foundry-pc-types
+```
 
 ## Configuration
 
