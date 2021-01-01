@@ -49,6 +49,6 @@ jobs:
             - name: Bump npm version
               run: pnpm version ${{ steps.tag.outputs.tag }} --no-git-tag-version --allow-same-version
 
-            - run: pnpm publish
+            - run: pnpm publish --no-git-checks
               env:
                   NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
