@@ -1,7 +1,7 @@
 declare interface ItemSheetData<DataType = any>
 	extends BaseEntitySheetData<DataType> {
-	item?: Item<DataType>;
-	data?: any;
+	item: ItemData<DataType>;
+	data: DataType;
 }
 
 /**
@@ -38,7 +38,7 @@ declare class ItemSheet<
 	/**
 	 * The Actor instance which owns this item. This may be null if the item is unowned.
 	 */
-	get actor(): Actor<DataType>;
+	get actor(): Actor | null;
 
 	/**
 	 * Customize the data provided to the item sheet for rendering. By default we just duplicate the item data.

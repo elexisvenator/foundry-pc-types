@@ -30,6 +30,12 @@ interface ApplicationOptions extends Object {
 	 * have their vertical scroll positions preserved during a re-render.
 	 */
 	scrollY?: string[];
+
+	/**
+	 * Css selectors for dragging and dropping.
+	 */
+	dragDrop: { dragSelector?: string; dropSelector?: string }[];
+
 	[key: string]: any;
 }
 

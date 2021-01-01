@@ -1,10 +1,11 @@
 declare interface BaseEntitySheetData<DataType = any> {
-	entity?: EntityData<DataType>;
-	owner?: boolean;
-	limited?: boolean;
-	options?: any;
-	editable?: boolean;
-	cssClass?: string;
+	cssClass: 'editable' | 'locked';
+	editable: boolean;
+	entity: EntityData<DataType>;
+	limited: boolean;
+	options: any;
+	owner: boolean;
+	title: string;
 }
 
 /**
@@ -48,5 +49,5 @@ declare class BaseEntitySheet<
 	protected _updateObject(
 		event: Event | JQuery.Event,
 		formData: any
-	): Promise<any>;
+	): Promise<EntityType>;
 }
