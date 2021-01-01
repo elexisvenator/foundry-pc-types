@@ -8,7 +8,7 @@
 
 This is a clone of [foundry-pc-types](https://gitlab.com/foundry-projects/foundry-pc/foundry-pc-types) by [![Twitter Follow](https://img.shields.io/badge/follow-%40NickEastNL-blue.svg?style=flat-square&logo=twitter)](https://twitter.com/NickEastNL). This project contains changes I made fix issues using these types in my own Foundry systems development.  These changes _might_ make it into the other repo, or they might not. This repo might become out of sync. There are also other initiatives to solve adding types to foundry (see the other repo's readme) which might make this obsolete. So use this at your own risk.
 
-If you would like to contribute, consider contributing to [NickEast's repo](https://gitlab.com/foundry-projects/foundry-pc/foundry-pc-types) first/as well.
+If you would like to contribute, consider contributing to [NickEastNL's repo](https://gitlab.com/foundry-projects/foundry-pc/foundry-pc-types) first/as well.
 
 ## Installing
 
