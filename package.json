@@ -1,5 +1,5 @@
 {
-	"name": "foundry-pc-types",
+	"name": "@elexisvenator/foundry-pc-types",
 	"version": "0.1.0",
 	"description": "TypeScript type definitions for Foundry VTT",
 	"scripts": {
@@ -7,14 +7,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://gitlab.com/foundry-projects/foundry-pc/foundry-pc-types.git"
+		"url": "git+https://github.com/elexisvenator/foundry-pc-types.git"
 	},
 	"author": "N. van Oosten",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://gitlab.com/foundry-projects/foundry-pc/foundry-pc-types/issues"
+		"url": "https://github.com/elexisvenator/foundry-pc-types/issues"
 	},
-	"homepage": "https://gitlab.com/foundry-projects/foundry-pc/foundry-pc-types#readme",
+	"homepage": "https://github.com/elexisvenator/foundry-pc-types#readme",
 	"dependencies": {
 		"@types/jquery": "^3.5.1",
 		"@types/socket.io-client": "^1.4.33",
