@@ -46,7 +46,7 @@ declare class Die extends DiceTerm {
 	 *
 	 * @param modifier     The matched modifier query
 	 */
-	keep(modifier: string): void;
+	keep(modifier: string): this | void;
 
 	/**
 	 * Drop a certain number of highest or lowest dice rolls from the result set.
@@ -59,7 +59,7 @@ declare class Die extends DiceTerm {
 	 *
 	 * @param modifier     The matched modifier query
 	 */
-	drop(modifier: string): void;
+	drop(modifier: string): this | void;
 
 	/**
 	 * Count the number of successful results which occurred in a given result set.
@@ -72,7 +72,7 @@ declare class Die extends DiceTerm {
 	 *
 	 * @param modifier     The matched modifier query
 	 */
-	countSuccess(modifier: string): void;
+	countSuccess(modifier: string): this | void;
 
 	/**
 	 * Count the number of failed results which occurred in a given result set.
@@ -85,7 +85,7 @@ declare class Die extends DiceTerm {
 	 *
 	 * @param modifier     The matched modifier query
 	 */
-	countFailures(modifier: string): void;
+	countFailures(modifier: string): this | void;
 
 	/**
 	 * Deduct the number of failures from the dice result, counting each failure as -1
@@ -98,7 +98,7 @@ declare class Die extends DiceTerm {
 	 *
 	 * @param modifier     The matched modifier query
 	 */
-	deductFailures(modifier: string): void;
+	deductFailures(modifier: string): this | void;
 
 	/**
 	 * Subtract the value of failed dice from the non-failed total, where each failure counts as its negative value.
@@ -109,7 +109,7 @@ declare class Die extends DiceTerm {
 	 *
 	 * @param modifier     The matched modifier query
 	 */
-	subtractFailures(modifier: string): void;
+	subtractFailures(modifier: string): this | void;
 
 	/**
 	 * Subtract the total value of the DiceTerm from a target value, treating the difference as the final total.

@@ -1,4 +1,24 @@
 /**
+ * The result of a DiceTerm roll
+ */
+interface DiceTermResult {
+	result: number;
+	active: boolean;
+	count?: number;
+	success?: boolean;
+	failure?: boolean;
+	rerolled?: boolean;
+	exploded?: boolean;
+	discarded?: boolean;
+}
+
+/**
+ * Method called on to modify the result set in a DiceTerm.
+ * @this is DiceTerm
+ */
+type ModifierFn = (modifier: string) => void;
+
+/**
  * An abstract base class for any term which appears in a dice roll formula
  * @abstract
  *
@@ -43,7 +63,7 @@ declare class DiceTerm {
 	/**
 	 * The array of dice term results which have been rolled
 	 */
-	results: object[];
+	results: DiceTermResult[];
 
 	/**
 	 * Return a standardized representation for the displayed formula associated with this DiceTerm
@@ -64,7 +84,7 @@ declare class DiceTerm {
 	 * Roll the DiceTerm by mapping a random uniform draw against the faces of the dice term.
 	 * @param [minimize]    Apply the minimum possible result instead of a random result.
 	 * @param [maximize]    Apply the maximum possible result instead of a random result.
-	 * @return {object}
+	 * @return {DiceTermResult}
 	 */
 	roll({
 		minimize,
@@ -72,7 +92,7 @@ declare class DiceTerm {
 	}?: {
 		minimize: boolean;
 		maximize: boolean;
-	}): { result: number; active: boolean };
+	}): DiceTermResult;
 
 	/**
 	 * Alter the DiceTerm by adding or multiplying the number of dice which are rolled
@@ -122,5 +142,7 @@ declare class DiceTerm {
 	/**
 	 * Define the modifiers that can be used for this particular DiceTerm type.
 	 */
-	static MODIFIERS: { [modifier: string]: string };
+	static MODIFIERS: {
+		[modifier: string]: string | ModifierFn;
+	};
 }
