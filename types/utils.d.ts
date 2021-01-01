@@ -49,7 +49,7 @@ declare function getType(token: any): string;
  */
 declare function mergeObject<T>(
 	original: T,
-	other?: T,
+	other: Partial<T>,
 	{
 		insertKeys,
 		insertValues,
