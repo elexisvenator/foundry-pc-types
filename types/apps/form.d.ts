@@ -55,7 +55,7 @@ declare class FormApplication extends Application {
 	 */
 	editors: any;
 
-	constructor(object: any, options?: FormApplicationOptions);
+	constructor(object?: any, options?: FormApplicationOptions);
 
 	/**
 	 * Assign the default options which are supported by the entity edit sheet

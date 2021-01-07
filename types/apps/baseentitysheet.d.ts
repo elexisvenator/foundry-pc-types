@@ -15,7 +15,7 @@ declare class BaseEntitySheet<
 	DataType = any,
 	EntityType extends Entity<DataType> = any
 > extends FormApplication {
-	constructor(...args: any);
+	constructor(object: EntityType, options?: FormApplicationOptions);
 
 	/**
 	 * A convenience accessor for the object property of the inherited FormApplication instance

@@ -20,6 +20,8 @@ declare class ItemSheet<
 	DataType = any,
 	ItemType extends Item<DataType> = any
 > extends BaseEntitySheet {
+	constructor(object: ItemType, options?: FormApplicationOptions);
+
 	/**
 	 * Assign the default options which are supported by this Application
 	 */

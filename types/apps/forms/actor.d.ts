@@ -26,7 +26,7 @@ declare class ActorSheet<
 	 */
 	token: Token;
 
-	constructor(...args: any);
+	constructor(object: ActorType, options?: FormApplicationOptions);
 
 	/**
 	 * Default rendering and configuration options used for the ActorSheet and its subclasses.
