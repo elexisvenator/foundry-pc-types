@@ -40,7 +40,7 @@ declare class BaseEntitySheet<
 	/**
 	 * Default data preparation logic for the entity sheet
 	 */
-	getData(): BaseEntitySheetData<DataType>;
+	getData(options: any): BaseEntitySheetData<DataType>;
 
 	/**
 	 * Implement the _updateObject method as required by the parent class spec

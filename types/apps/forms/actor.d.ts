@@ -53,7 +53,7 @@ declare class ActorSheet<
 	 * Prepare data for rendering the Actor sheet
 	 * The prepared data object contains both the actor data as well as additional sheet options
 	 */
-	getData(): ActorSheetData<DataType>;
+	getData(options: any): ActorSheetData<DataType>;
 
 	/**
 	 * Extend the Header Button configuration for the ActorSheet to add Token configuration buttons

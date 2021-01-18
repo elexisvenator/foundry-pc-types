@@ -45,7 +45,7 @@ declare class ItemSheet<
 	/**
 	 * Customize the data provided to the item sheet for rendering. By default we just duplicate the item data.
 	 */
-	getData(): ItemSheetData<DataType>;
+	getData(options: any): ItemSheetData<DataType>;
 
 	/**
 	 * Activate listeners which provide interactivity for item sheet events
