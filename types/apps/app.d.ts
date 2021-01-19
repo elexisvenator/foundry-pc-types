@@ -202,7 +202,7 @@ declare class Application {
 	 * An asynchronous inner function which handles the rendering of the Application
 	 * @param options	Provided rendering options, see the render function for details
 	 */
-	protected _render(force?: boolean, options?: any): void;
+	protected _render(force?: boolean, options?: RenderOptions): Promise<void>;
 
 	/**
 	 * Persist the scroll positions of containers within the app before re-rendering the content
