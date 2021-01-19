@@ -34,7 +34,7 @@ interface ApplicationOptions extends Object {
 	/**
 	 * Css selectors for dragging and dropping.
 	 */
-	dragDrop: { dragSelector?: string; dropSelector?: string }[];
+	dragDrop?: { dragSelector?: string; dropSelector?: string }[];
 
 	[key: string]: any;
 }
