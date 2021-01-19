@@ -3,6 +3,8 @@ declare interface EntityData<DataType = any> {
 	type: string;
 	flags: any;
 	data: DataType;
+	sort?: number;
+	_id: string;
 }
 
 /**
