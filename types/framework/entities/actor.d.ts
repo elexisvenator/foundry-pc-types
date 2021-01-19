@@ -1,6 +1,7 @@
 declare interface ActorData<DataType = any> extends EntityData<DataType> {
 	img: string;
 	token: any;
+	items: Item[];
 }
 
 /**
