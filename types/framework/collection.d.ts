@@ -122,18 +122,19 @@ declare class Collection<T extends Entity> extends Map {
 	 * let c = new Collection([["a", "AA"], ["b", "AB"], ["c", "CC"]]);
 	 * let hasA = c.filters(entry => entry.slice(0) === "A");
 	 */
-	filter(condition: any): any[];
+	filter(condition: (value: T) => boolean): T[];
+
 	/**
 	 * Find an entry in the Map using an functional condition.
 	 * @param condition 	The functional condition to test
 	 */
-	find(condition: any): any | null;
+	find(condition: (value: T) => boolean): T | null;
 
 	/**
 	 * Transform each element of the Collection into a new form, returning an Array of transformed values
 	 * @param {Function} transformer  The transformation function to apply to each entry value
 	 */
-	map(transformer: any): any[];
+	map<U>(transformer: (value: T) => U): U[];
 
 	/**
 	 * Reduce the Collection by applying an evaluator function and accumulating entries
@@ -146,7 +147,7 @@ declare class Collection<T extends Entity> extends Map {
 	 *   return s + l;
 	 * }, ""); // "ABC"
 	 */
-	reduce(evaluator: any, initial: any): any;
+	reduce<U>(evaluator: (accumulator: U, currentValue: T) => U, initial: U): U;
 
 	/**
 	 * Import an Entity from a compendium collection, adding it to the current World
